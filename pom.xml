@@ -260,7 +260,7 @@
 
   <distributionManagement>
     <repository>
-      <id>dwarveswork-java-bom</id>
+      <id>github</id>
       <name>GitHub dwarveswork java bom Packages</name>
       <url>https://maven.pkg.github.com/dwarveswork/java-bom</url>
     </repository>
