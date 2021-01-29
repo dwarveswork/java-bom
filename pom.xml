@@ -6,13 +6,23 @@
 
   <groupId>com.dwarveswork</groupId>
   <artifactId>java-bom</artifactId>
-  <packaging>pom</packaging>
-  <description>dwarveswork java maven bom file.</description>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>dwarveswork-java-bom</name>
+  <description>dwarveswork java maven bom file.</description>
+  <url>https://github.com/dwarveswork/java-bom</url>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <organization>
     <name>dwarveswork</name>
     <url>https://github.com/dwarveswork</url>
   </organization>
+
   <developers>
     <developer>
       <name>WAN Peng</name>
@@ -21,7 +31,6 @@
   </developers>
 
   <properties>
-
     <spring.version>5.3.2</spring.version>
     <spring-boot.version>2.4.1</spring-boot.version>
     <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
@@ -98,6 +107,11 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
         <version>${spring.version}</version>
       </dependency>
       <!-- spring jdbc -->
@@ -244,6 +258,13 @@
     </dependencies>
   </dependencyManagement>
 
+  <distributionManagement>
+    <repository>
+      <id>dwarveswork-java-bom</id>
+      <name>GitHub dwarveswork java bom Packages</name>
+      <url>https://maven.pkg.github.com/dwarveswork/java-bom</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <pluginManagement>
@@ -417,5 +438,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
